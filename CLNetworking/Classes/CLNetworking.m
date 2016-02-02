@@ -527,7 +527,9 @@ static NSTimeInterval g_requestTimeOut = 10;
     }
     
     NSError *error = nil;
-    NSDictionary *response = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:&error];
+    NSDictionary *response = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                             options:NSJSONReadingMutableContainers
+                                                               error:&error];
     if (error) {
         return responseObject;
     }
