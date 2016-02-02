@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E78BB63A849EE8F8F8AE15F /* libPods-CLNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DB9A051F35F6F73F491D03 /* libPods-CLNetworking.a */; };
+		132E2C560BA041AA18AEB50A /* libPods-CLNetworkingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 621AE4E581B80917B6F75079 /* libPods-CLNetworkingTests.a */; };
 		8335CBA01C60415E009E3143 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8335CB9F1C60415E009E3143 /* main.m */; };
 		8335CBA31C60415E009E3143 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8335CBA21C60415E009E3143 /* AppDelegate.m */; };
 		8335CBA61C60415E009E3143 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8335CBA51C60415E009E3143 /* ViewController.m */; };
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		621AE4E581B80917B6F75079 /* libPods-CLNetworkingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CLNetworkingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8335CB9B1C60415E009E3143 /* CLNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8335CB9F1C60415E009E3143 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8335CBA11C60415E009E3143 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +43,11 @@
 		8335CBB41C60415E009E3143 /* CLNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8335CBB81C60415E009E3143 /* CLNetworkingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLNetworkingTests.m; sourceTree = "<group>"; };
 		8335CBBA1C60415E009E3143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83474427DB1861BF78CE7649 /* Pods-CLNetworkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLNetworkingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLNetworkingTests/Pods-CLNetworkingTests.release.xcconfig"; sourceTree = "<group>"; };
+		89DB9A051F35F6F73F491D03 /* libPods-CLNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CLNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92FA1C878CB64C3630FEEC1D /* Pods-CLNetworkingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLNetworkingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLNetworkingTests/Pods-CLNetworkingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD80B9AED542BACC208CF3F7 /* Pods-CLNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLNetworking.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLNetworking/Pods-CLNetworking.release.xcconfig"; sourceTree = "<group>"; };
+		C68C1358F18480F43FC1BDAC /* Pods-CLNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLNetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLNetworking/Pods-CLNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E78BB63A849EE8F8F8AE15F /* libPods-CLNetworking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				132E2C560BA041AA18AEB50A /* libPods-CLNetworkingTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +76,8 @@
 				8335CB9D1C60415E009E3143 /* CLNetworking */,
 				8335CBB71C60415E009E3143 /* CLNetworkingTests */,
 				8335CB9C1C60415E009E3143 /* Products */,
+				EAEFA3C70D143959D3A9E6AE /* Pods */,
+				C21F0FC27203400D871E595A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +123,26 @@
 			path = CLNetworkingTests;
 			sourceTree = "<group>";
 		};
+		C21F0FC27203400D871E595A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89DB9A051F35F6F73F491D03 /* libPods-CLNetworking.a */,
+				621AE4E581B80917B6F75079 /* libPods-CLNetworkingTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAEFA3C70D143959D3A9E6AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C68C1358F18480F43FC1BDAC /* Pods-CLNetworking.debug.xcconfig */,
+				BD80B9AED542BACC208CF3F7 /* Pods-CLNetworking.release.xcconfig */,
+				92FA1C878CB64C3630FEEC1D /* Pods-CLNetworkingTests.debug.xcconfig */,
+				83474427DB1861BF78CE7649 /* Pods-CLNetworkingTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8335CBBD1C60415E009E3143 /* Build configuration list for PBXNativeTarget "CLNetworking" */;
 			buildPhases = (
+				5F41FE02E75431F22F5F5DFA /* Check Pods Manifest.lock */,
 				8335CB971C60415E009E3143 /* Sources */,
 				8335CB981C60415E009E3143 /* Frameworks */,
 				8335CB991C60415E009E3143 /* Resources */,
+				79794E6676C75EDC00A5868E /* Embed Pods Frameworks */,
+				73820CFB7FF6198247D8B8E2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,9 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8335CBC01C60415E009E3143 /* Build configuration list for PBXNativeTarget "CLNetworkingTests" */;
 			buildPhases = (
+				6416BD716D178ED5555402C4 /* Check Pods Manifest.lock */,
 				8335CBB01C60415E009E3143 /* Sources */,
 				8335CBB11C60415E009E3143 /* Frameworks */,
 				8335CBB21C60415E009E3143 /* Resources */,
+				62D6CC3582E5A21D0ACA74E6 /* Embed Pods Frameworks */,
+				F50203760091628CABD987FA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,6 +243,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F41FE02E75431F22F5F5DFA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		62D6CC3582E5A21D0ACA74E6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CLNetworkingTests/Pods-CLNetworkingTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6416BD716D178ED5555402C4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		73820CFB7FF6198247D8B8E2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CLNetworking/Pods-CLNetworking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79794E6676C75EDC00A5868E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CLNetworking/Pods-CLNetworking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F50203760091628CABD987FA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CLNetworkingTests/Pods-CLNetworkingTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8335CB971C60415E009E3143 /* Sources */ = {
@@ -339,6 +470,7 @@
 		};
 		8335CBBE1C60415E009E3143 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C68C1358F18480F43FC1BDAC /* Pods-CLNetworking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CLNetworking/Info.plist;
@@ -350,6 +482,7 @@
 		};
 		8335CBBF1C60415E009E3143 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD80B9AED542BACC208CF3F7 /* Pods-CLNetworking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CLNetworking/Info.plist;
@@ -361,6 +494,7 @@
 		};
 		8335CBC11C60415E009E3143 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92FA1C878CB64C3630FEEC1D /* Pods-CLNetworkingTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CLNetworkingTests/Info.plist;
@@ -373,6 +507,7 @@
 		};
 		8335CBC21C60415E009E3143 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83474427DB1861BF78CE7649 /* Pods-CLNetworkingTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CLNetworkingTests/Info.plist;
@@ -402,6 +537,7 @@
 				8335CBBF1C60415E009E3143 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8335CBC01C60415E009E3143 /* Build configuration list for PBXNativeTarget "CLNetworkingTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +546,7 @@
 				8335CBC21C60415E009E3143 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
