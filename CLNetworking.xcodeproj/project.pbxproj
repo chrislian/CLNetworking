@@ -16,6 +16,7 @@
 		8335CBAB1C60415E009E3143 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8335CBAA1C60415E009E3143 /* Assets.xcassets */; };
 		8335CBAE1C60415E009E3143 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8335CBAC1C60415E009E3143 /* LaunchScreen.storyboard */; };
 		8335CBB91C60415E009E3143 /* CLNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8335CBB81C60415E009E3143 /* CLNetworkingTests.m */; };
+		8335CBC61C6045C1009E3143 /* CLNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 8335CBC51C6045C1009E3143 /* CLNetworking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		8335CBB41C60415E009E3143 /* CLNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8335CBB81C60415E009E3143 /* CLNetworkingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLNetworkingTests.m; sourceTree = "<group>"; };
 		8335CBBA1C60415E009E3143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8335CBC41C6045C1009E3143 /* CLNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLNetworking.h; sourceTree = "<group>"; };
+		8335CBC51C6045C1009E3143 /* CLNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLNetworking.m; sourceTree = "<group>"; };
 		83474427DB1861BF78CE7649 /* Pods-CLNetworkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLNetworkingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CLNetworkingTests/Pods-CLNetworkingTests.release.xcconfig"; sourceTree = "<group>"; };
 		89DB9A051F35F6F73F491D03 /* libPods-CLNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CLNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FA1C878CB64C3630FEEC1D /* Pods-CLNetworkingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CLNetworkingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CLNetworkingTests/Pods-CLNetworkingTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +96,7 @@
 		8335CB9D1C60415E009E3143 /* CLNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				8335CBC31C6045AA009E3143 /* Classes */,
 				8335CBA11C60415E009E3143 /* AppDelegate.h */,
 				8335CBA21C60415E009E3143 /* AppDelegate.m */,
 				8335CBA41C60415E009E3143 /* ViewController.h */,
@@ -121,6 +125,15 @@
 				8335CBBA1C60415E009E3143 /* Info.plist */,
 			);
 			path = CLNetworkingTests;
+			sourceTree = "<group>";
+		};
+		8335CBC31C6045AA009E3143 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8335CBC41C6045C1009E3143 /* CLNetworking.h */,
+				8335CBC51C6045C1009E3143 /* CLNetworking.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		C21F0FC27203400D871E595A /* Frameworks */ = {
@@ -342,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8335CBC61C6045C1009E3143 /* CLNetworking.m in Sources */,
 				8335CBA61C60415E009E3143 /* ViewController.m in Sources */,
 				8335CBA31C60415E009E3143 /* AppDelegate.m in Sources */,
 				8335CBA01C60415E009E3143 /* main.m in Sources */,
