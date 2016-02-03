@@ -245,9 +245,7 @@ static NSTimeInterval g_requestTimeOut = 10;
         NSLog(@"urlString invalid");
         return nil;
     }
-    return [[self cl_manager] POST:urlString
-                        parameters:paramters
-         constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    return [[self cl_manager] POST:urlString parameters:paramters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
              
         NSData *imageData = UIImageJPEGRepresentation(image, 1);
         NSString *imageFileName = filename;
@@ -268,8 +266,7 @@ static NSTimeInterval g_requestTimeOut = 10;
                 id  _Nullable responseObject) {
         
         [self successResponse:responseObject callback:success];
-    } failure:^(NSURLSessionDataTask * _Nullable task,
-                NSError * _Nonnull error) {
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
         if (failure) {
             failure(error);
@@ -303,18 +300,14 @@ static NSTimeInterval g_requestTimeOut = 10;
     
     AFHTTPSessionManager *manager = [self cl_manager];
     NSURLRequest *request = [NSURLRequest requestWithURL:uploadURL];
-    
-    return [manager uploadTaskWithRequest:request
-                                 fromFile:[NSURL URLWithString:filePath]
-                                 progress:^(NSProgress * _Nonnull uploadProgress) {
+    NSURL *fileURL = [NSURL URLWithString:filePath];
+    return [manager uploadTaskWithRequest:request fromFile:fileURL progress:^(NSProgress * _Nonnull uploadProgress) {
                                      
         if (progress) {
             progress(uploadProgress.completedUnitCount, uploadProgress.totalUnitCount);
         }
                                      
-    } completionHandler:^(NSURLResponse * _Nonnull response,
-                          id  _Nullable responseObject,
-                          NSError * _Nullable error) {
+    } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
         [self successResponse:responseObject callback:success];
         
@@ -350,19 +343,18 @@ static NSTimeInterval g_requestTimeOut = 10;
     
     AFHTTPSessionManager *manager = [self cl_manager];
     NSURLRequest *request = [NSURLRequest requestWithURL:downloadURL];
-    return [manager downloadTaskWithRequest:request
-                                   progress:^(NSProgress * _Nonnull downloadProgress) {
+    return [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
                                        
         if (progress) {
             progress(downloadProgress.completedUnitCount,downloadProgress.totalUnitCount);
         }
+        
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath,
                                     NSURLResponse * _Nonnull response) {
         
         return [NSURL URLWithString:saveFilePath];
-    } completionHandler:^(NSURLResponse * _Nonnull response,
-                          NSURL * _Nullable filePath,
-                          NSError * _Nullable error) {
+        
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         
         if (success) {
             success(filePath.absoluteString);
@@ -466,9 +458,7 @@ static NSTimeInterval g_requestTimeOut = 10;
     AFHTTPSessionManager *manager = [self cl_manager];
     switch (httpMethod) {
         case cl_GET: {
-            return [manager GET:urlString
-                     parameters:parameters
-                       progress:^(NSProgress * _Nonnull downloadProgress) {
+            return [manager GET:urlString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
                            
                 if (progress) {
                     progress(downloadProgress.completedUnitCount,downloadProgress.totalUnitCount);
@@ -489,25 +479,25 @@ static NSTimeInterval g_requestTimeOut = 10;
             break;
         }
         case cl_POST: {
-            return [manager POST:urlString
-                      parameters:parameters
-                        progress:^(NSProgress * _Nonnull uploadProgress) {
-                            
+            
+            return [manager POST:urlString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+                
                 if (progress) {
                     progress(uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
                 }
-            } success:^(NSURLSessionDataTask * _Nonnull task,
-                        id  _Nullable responseObject) {
                 
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+               
                 [self successResponse:responseObject callback:success];
                 
-            } failure:^(NSURLSessionDataTask * _Nullable task,
-                        NSError * _Nonnull error) {
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 
                 if (failure) {
                     failure(error);
                 }
+                
             }];
+
             break;
         }
     }
