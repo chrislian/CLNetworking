@@ -72,7 +72,7 @@ static NSTimeInterval g_requestTimeOut = 10;
  */
 + (void)cl_configRequestType:(CLRequestType)requestType{
     if (g_requestType != requestType) {
-        g_requestType = g_requestType;
+        g_requestType = requestType;
     }
 }
 

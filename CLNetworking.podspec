@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CLNetworking"
-  s.version      = "3.0.0"
+  s.version      = "3.0.1"
   s.summary      = "基于AFNetworking 3.x 简易封装"
   s.description  = <<-DESC
   			基于AFNetworking 3.x封装,提供常用的api
