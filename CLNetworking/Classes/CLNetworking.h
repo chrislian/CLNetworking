@@ -224,6 +224,24 @@ typedef void (^CLResponseFailure)(NSError *error);
                             failure:(CLResponseFailure)failure;
 
 /**
+ *  断点上传(未测试)
+ *
+ *  @param filePath  文件路径
+ *  @param urlString 上传地址
+ *  @param bytes     已经上传的进度
+ *  @param progress  @see CLUploadProgress
+ *  @param success   @see CLResponseSuccess
+ *  @param failure   @see CLResponseFailure
+ *
+ *  @return NSURLSessionTask
+ */
++ (NSURLSessionTask *)cl_uploadFile:(NSString *)filePath
+                          urlString:(NSString *)urlString
+                       alreadyBytes:(int64_t)bytes
+                           progress:(CLUploadProgress)progress
+                            success:(CLResponseSuccess)success
+                            failure:(CLResponseFailure)failure;
+/**
  *  下载文件
  *
  *  @param saveFilePath 文件保存路径
