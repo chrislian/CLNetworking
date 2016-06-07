@@ -550,7 +550,7 @@ static NSTimeInterval g_requestTimeOut = 10;
     if (error) {
         return responseObject;
     }
-    return response;
+    return [self changeType:response];
 }
 
 /**
@@ -564,6 +564,130 @@ static NSTimeInterval g_requestTimeOut = 10;
         success([self cl_prarseResponseObject:responseObject]);
     }
 }
+//将NSDictionary中的Null类型的项目转化成@""
++(NSDictionary *)nullDic:(NSDictionary *)myDic
+{
+    NSArray *keyArr = [myDic allKeys];
+    NSMutableDictionary *resDic = [[NSMutableDictionary alloc]init];
+    for (int i = 0; i < keyArr.count; i ++)
+    {
+        id obj = [myDic objectForKey:keyArr[i]];
+        
+        obj = [self changeType:obj];
+        
+        [resDic setObject:obj forKey:keyArr[i]];
+    }
+    return resDic;
+}
 
+//将NSArray中的Null类型的项目转化成@""
++(NSArray *)nullArr:(NSArray *)myArr
+{
+    NSMutableArray *resArr = [[NSMutableArray alloc] init];
+    for (int i = 0; i < myArr.count; i ++)
+    {
+        id obj = myArr[i];
+        
+        obj = [self changeType:obj];
+        
+        [resArr addObject:obj];
+    }
+    return resArr;
+}
+
+//将NSString类型的原路返回
++(NSString *)stringToString:(NSString *)string
+{
+    return string;
+}
+
+//将Null类型的项目转化成@""
++(NSString *)nullToString
+{
+    return @"nil";
+}
+
+#pragma mark - 公有方法
+//类型识别:将所有的NSNull类型转化成@""
++(id)changeType:(id)myObj
+{
+    if ([myObj isKindOfClass:[NSDictionary class]])
+    {
+        return [self nullDic:myObj];
+    }
+    else if([myObj isKindOfClass:[NSArray class]])
+    {
+        return [self nullArr:myObj];
+    }
+    else if([myObj isKindOfClass:[NSString class]])
+    {
+        return [self stringToString:myObj];
+    }
+    else if([myObj isKindOfClass:[NSNull class]])
+    {
+        return [self nullToString];
+    }
+    else
+    {
+        return myObj;
+    }
+}
+/**
+ *  数组转json
+ *
+ *  @param arr 数组
+ *
+ *  @return 数组json
+ */
++ (NSString *)NSArrayTojson:(NSArray *)arr{
+    NSError *parseError   = nil;
+    
+    NSData *jsonData      = [NSJSONSerialization dataWithJSONObject:arr options:NSJSONWritingPrettyPrinted error:&parseError];
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
+/**
+ *  json 转 字典
+ *
+ *  @param jsonStr json
+ *
+ *  @return 数组
+ */
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonStr{
+    if (jsonStr == nil) {
+        return nil;
+    }
+    NSData *jsonData      = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *dic     = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+    return dic;
+}
+/**
+ * 字典转json
+ */
++ (NSString*)dictionaryToJson:(NSDictionary *)dic {
+    
+    NSError *parseError   = nil;
+    
+    NSData *jsonData      = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
+    
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+}
+/**
+ *  json 转 数组
+ *
+ *  @param jsonStr json
+ *
+ *  @return 数组
+ */
++(NSArray *)arrayWithjsonString:(NSString *)jsonStr{
+    if (jsonStr == nil) {
+        return nil;
+    }
+    NSData *jsonData      = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSArray *arr          = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+    return arr;
+}
 
 @end
