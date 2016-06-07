@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
 
   s.name         = "CLNetworking"
-  s.version      = "3.0.1"
+  s.version      = "3.0.2"
   s.summary      = "基于AFNetworking 3.x 简易封装"
   s.description  = <<-DESC
-  			基于AFNetworking 3.x封装,提供常用的api
+  			基于AFNetworking 3.x封装,提供常用的api, 优化
                    DESC
   s.homepage     = "https://github.com/chrislian/CLNetworking"
   s.license      = "MIT"
